@@ -1,9 +1,11 @@
 
+
+
+
 .container {
     display: grid;
     justify-items: center;
     width: 900px;
-    margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 100px 400px 500px 500px 100px;
     grid-template-areas: 
@@ -18,15 +20,40 @@
 header {
     background-color: #3068D9;
     justify-self: stretch;
+    color: #fff;
+    align-items: center;
+    display: flex;
+    padding: 30px;
 }
+
+.header-menu {
+    list-style-type: none;
+}
+
+.header-menu > li {
+    display: inline;
+}
+
+.header-menu > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
 
 /* Hero image */
 
 .hero {
     background-image: url('Assets/img/Man-sitting-at-computer.jpg');
-    width: 800px;
     height: 400px;
+    width: 900px;
     background-position: center;
     background-size: cover;
     grid-area: hero;
+    color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
