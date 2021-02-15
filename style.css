@@ -1,0 +1,32 @@
+
+.container {
+    display: grid;
+    justify-items: center;
+    width: 900px;
+    margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 400px 500px 500px 100px;
+    grid-template-areas: 
+    "menu"
+    "hero"
+    "about"
+    "work"
+    "footer"
+    ;
+}
+
+header {
+    background-color: #3068D9;
+    justify-self: stretch;
+}
+
+/* Hero image */
+
+.hero {
+    background-image: url('Assets/img/Man-sitting-at-computer.jpg');
+    width: 800px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    grid-area: hero;
+}
