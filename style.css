@@ -20,9 +20,7 @@ img {
     display: grid;
     justify-content: center;
     margin: 0 auto;
-    /* width: 1000px; */
     justify-items: center;
-    /* grid-template-columns: repeat(12, 1fr); */
     grid-template-rows: 80px minmax(300px, 400px) auto 1fr 100px;
     grid-template-areas: 
     "menu"
@@ -125,4 +123,5 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
+    color: #fff;
 }
