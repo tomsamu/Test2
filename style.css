@@ -3,11 +3,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
 }
 
-h3 {
-    font-size: 1.6rem;
-}
+h1 {font-size: 4rem;}
+h2 {font-size: 2rem; text-align: center;}
+h3 {font-size: 1.6rem;}
 
 img {
     width: 100%;
@@ -19,10 +20,10 @@ img {
     display: grid;
     justify-content: center;
     margin: 0 auto;
-    max-width: 1000px;
+    /* width: 1000px; */
     justify-items: center;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 80px 1fr 1fr 1fr 100px;
+    /* grid-template-columns: repeat(12, 1fr); */
+    grid-template-rows: 80px minmax(300px, 400px) auto 1fr 100px;
     grid-template-areas: 
     "menu"
     "hero"
@@ -66,8 +67,9 @@ header {
 
 .hero {
     background-image: url('Assets/img/Man-sitting-at-computer.jpg');
+    background-color:blanchedalmond;
+    width: 100%;
     height: auto;
-    width: 1000px;
     background-position: center;
     background-size: cover;
     grid-area: hero;
@@ -75,7 +77,6 @@ header {
     display: grid;
     justify-items: center;
     align-items: center;
-    
 }
 
 .hero-img {
@@ -89,6 +90,7 @@ header {
 
 .about-text {
     max-width: 600px;
+    margin: 20px;
 }
 
 /* Work */
@@ -100,7 +102,7 @@ header {
 
 .card-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 10px;
 }
 
