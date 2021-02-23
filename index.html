@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>John's portfolio</title>
 
     <!-- Stylesheet -->
@@ -16,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="script.js" type="text/javascript"></script> -->
   </head>
   <body>
     <div class="container">
@@ -54,6 +59,20 @@
             sint deleniti iste minus nobis sequi, neque harum accusamus
             necessitatibus ipsam vero, eos sit aperiam.
           </p>
+          <button class="accordion">Section 1</button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+
+          <button class="accordion">Section 2</button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+
+          <button class="accordion">Section 3</button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
         </div>
       </section>
       <section class="work">
@@ -65,7 +84,7 @@
               alt=""
               class="card-img"
             />
-            <h3>Web design</h3>
+            <h3>Cyber security</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <div class="project-card">
@@ -90,5 +109,23 @@
       </section>
       <footer class="footer">Copyright: 2021</footer>
     </div>
+
+    <!-- Accordion script -->
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
