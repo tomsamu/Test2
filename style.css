@@ -1,150 +1,205 @@
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100%;
 }
 
-h1 {font-size: 4rem;}
-h2 {font-size: 2rem; text-align: center;}
-h3 {font-size: 1.6rem;}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+h3 {
+  font-size: 1.6rem;
+}
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
-
-
 .container {
-    display: grid;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 1200px;
-    justify-items: center;
-    grid-template-rows: 80px minmax(300px, 400px) auto 1fr 100px;
-    grid-template-areas: 
+  display: grid;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  justify-items: center;
+  grid-template-rows: 80px minmax(300px, 400px) auto 1fr 100px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
     "menu"
     "hero"
     "about"
     "work"
-    "footer"
-    ;
+    "footer";
 }
 
 header {
-    background-color: #3068D9;
-    justify-self: stretch;
-    color: #fff;
-    align-items: center;
-    display: flex;
-    padding: 20px;
-    grid-area: menu;
-    justify-content: space-between;
-    
+  background-color: #3068d9;
+  justify-self: stretch;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  padding: 20px;
+  grid-area: menu;
+  justify-content: space-between;
 }
 
 .logo {
-    max-width: 50px;
+  max-width: 50px;
 }
 
 .header-menu {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .header-menu > li {
-    display: inline;
+  display: inline;
+  margin-left: 30px;
+}
+
+.header-menu > li:hover {
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
 .header-menu > li > a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
-
 
 /* Hero image */
 
 .hero {
-    background-image: url('Assets/img/Man-sitting-at-computer.jpg');
-    background-color:blanchedalmond;
-    width: 100%;
-    height: auto;
-    background-position: center;
-    background-size: cover;
-    grid-area: hero;
-    color: white;
-    display: grid;
-    justify-items: center;
-    align-items: center;
+  background-image: url("Assets/img/Man-sitting-at-computer.jpg");
+  background-color: blanchedalmond;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  grid-area: hero;
+  color: white;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.hero > h1 {
+  background-color: rgba(58, 58, 58, 0.6);
+  padding: 10px 50px;
+  border-radius: 10px;
 }
 
 /* About section */
 .about {
-    grid-area: about;
+  grid-area: about;
 }
 
 .about-text {
-    max-width: 600px;
-    margin: 20px;
+  max-width: 600px;
+  margin: 20px;
 }
 
 .accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-  }
+  background-color: #eee;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
 
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
 
 /* Work */
 
 .work {
-    grid-area: work;
-    text-align: center;
+  grid-area: work;
+  text-align: center;
 }
 
 .card-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
 }
 
 .project-card {
-    border: 1px solid bisque;
-    flex-basis: 30%;
-    
-    
+  border: 1px solid rgba(48, 104, 217, 0.3);
+  flex-basis: 30%;
+  margin: 20px 0;
+}
+
+.project-card:hover {
+    opacity: 0.8;
 }
 
 .card-img {
-    width: 100%;
-    
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .footer {
-    background-color: #3068D9;
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #3068d9;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+}
+
+
+/* CONTACT PAGE */
+.contact {
+    max-width: 500px;
+}
+
+.form-hr {
+    margin-bottom: 30px;
+}
+
+.contact-form > input {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 10px 0;
     width: 100%;
-    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #777;
+}
+
+.contact-form > input[type=submit] {
+    background-color: #3068d9;
+    color: white;
+    font-size: 1.3rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact-form > input[type=submit]:hover {
+    background-color: lightblue;
+}
+
+.contact-form > input:focus {
+    background-color: lightblue;
 }
